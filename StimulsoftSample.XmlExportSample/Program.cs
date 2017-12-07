@@ -36,9 +36,9 @@ namespace StimulsoftSample.XmlExportSample
             var settings = new StiXmlExportSettings();
             report.ExportDocument(StiExportFormat.Xml, pathTemp, settings);
 
-            Process.Start(pathTemp);
-            Thread.Sleep(1500);
             Process.Start("Temp\\expected.xml");
+            Thread.Sleep(1500); // increase time if the second xml is not shown
+            Process.Start(pathTemp);
         }
     }
 }
