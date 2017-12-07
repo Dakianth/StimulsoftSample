@@ -4,6 +4,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Stimulsoft.Report;
 using Stimulsoft.Report.Export;
@@ -31,11 +32,13 @@ namespace StimulsoftSample.XmlExportSample
             //report.Design();
             report.Render(false);
 
-            var pathTemp = "Temp\\sample.xml";
+            var pathTemp = "Temp\\generated.xml";
             var settings = new StiXmlExportSettings();
             report.ExportDocument(StiExportFormat.Xml, pathTemp, settings);
 
             Process.Start(pathTemp);
+            Thread.Sleep(1500);
+            Process.Start("Temp\\expected.xml");
         }
     }
 }
