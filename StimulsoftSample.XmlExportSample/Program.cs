@@ -34,11 +34,18 @@ namespace StimulsoftSample.XmlExportSample
 
             var pathTemp = "Temp\\generated.xml";
             var settings = new StiXmlExportSettings();
+            string tableName = (string)report["TableName"];
+            settings.TableName = tableName;
             report.ExportDocument(StiExportFormat.Xml, pathTemp, settings);
+
+            Console.WriteLine($"TableName: {tableName}");
 
             Process.Start("Temp\\expected.xml");
             Thread.Sleep(1500); // increase time if the second xml is not shown
             Process.Start(pathTemp);
+
+            Console.WriteLine("Precione qualquer tecla para encerrar...");
+            Console.ReadKey();
         }
     }
 }

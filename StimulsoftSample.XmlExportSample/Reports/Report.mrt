@@ -322,7 +322,9 @@
     </Relations>
     <Report isRef="0" />
     <Resources isList="true" count="0" />
-    <Variables isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,TableName,TableName,,System.String,Category,False,False,False,False</value>
+    </Variables>
   </Dictionary>
   <EngineVersion>EngineV2</EngineVersion>
   <GlobalizationStrings isList="true" count="0" />
@@ -473,14 +475,14 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Categories</ReportAlias>
-  <ReportChanged>12/7/2017 11:02:11 AM</ReportChanged>
+  <ReportChanged>12/19/2017 9:23:17 AM</ReportChanged>
   <ReportCreated>12/7/2017 10:51:01 AM</ReportCreated>
-  <ReportFile>Reports\Report.mrt</ReportFile>
-  <ReportGuid>de9a9ab405484035ac6fbbab364baf4f</ReportGuid>
+  <ReportFile>C:\Projects\VS2017\StimulsoftSample\StimulsoftSample.XmlExportSample\Reports\Report.mrt</ReportFile>
+  <ReportGuid>e13f2206418243a391a690e6647e8484</ReportGuid>
   <ReportImage isNull="true" />
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
-  <ReportVersion>2018.1.2.0</ReportVersion>
+  <ReportVersion>2016.3.0</ReportVersion>
   <Script>using System;
 using System.Drawing;
 using System.Windows.Forms;
