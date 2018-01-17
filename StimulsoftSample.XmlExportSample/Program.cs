@@ -33,8 +33,8 @@ namespace StimulsoftSample.XmlExportSample
             report.Render(false);
 
             var pathTemp = "Temp\\generated.xml";
-            var settings = new StiXmlExportSettings();
             string tableName = (string)report["TableName"];
+            var settings = new StiXmlExportSettings();
             settings.TableName = tableName;
             report.ExportDocument(StiExportFormat.Xml, pathTemp, settings);
 
