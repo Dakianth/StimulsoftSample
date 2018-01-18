@@ -34,7 +34,7 @@ namespace StimulsoftSample.XmlExportSample
 
             var pathTemp = "Temp\\generated.xml";
             string tableName = (string)report["TableName"];
-            var settings = new StiXmlExportSettings();
+            var settings = new StiDataExportSettings(StiDataType.Xml);
             settings.TableName = tableName;
             report.ExportDocument(StiExportFormat.Xml, pathTemp, settings);
 
