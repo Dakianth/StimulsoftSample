@@ -16,6 +16,35 @@ namespace StimulsoftSample.XmlExportSample
         [STAThread]
         private static void Main(string[] args)
         {
+            //TestSettings();
+            Export();
+        }
+
+        public static void TestSettings()
+        {
+            StiExportSettings settings = null;
+            settings = new StiPdfExportSettings();
+            settings = new StiWord2007ExportSettings();
+            settings = new StiTxtExportSettings()
+            {
+                BorderType = StiTxtBorderType.Simple,
+                CutLongLines = false,
+                DrawBorder = false,
+                Encoding = Encoding.Default,
+                KillSpaceGraphLines = true,
+                KillSpaceLines = true,
+                PutFeedPageCode = false,
+                PageRange = StiPagesRange.All
+            };
+            settings = new StiRtfExportSettings();
+            settings = new StiTiffExportSettings();
+            settings = new StiXmlExportSettings();
+            settings = new StiHtml5ExportSettings();
+            settings = new StiExcel2007ExportSettings();
+        }
+
+        private static void Export()
+        {
             StiOptions.Export.Xml.ConvertTagsToUpperCase = false;
             StiOptions.Export.Xml.UseAliases = true;
 
@@ -34,7 +63,7 @@ namespace StimulsoftSample.XmlExportSample
 
             var pathTemp = "Temp\\generated.xml";
             string tableName = (string)report["TableName"];
-            var settings = new StiDataExportSettings(StiDataType.Xml);
+            var settings = new StiXmlExportSettings();
             settings.TableName = tableName;
             report.ExportDocument(StiExportFormat.Xml, pathTemp, settings);
 
